@@ -1,0 +1,17 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    --darkcolor: #222f22;
+    --mediumcolor: #296529;
+    --lightcolor: rgb(161, 244, 161);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}

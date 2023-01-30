@@ -1,0 +1,53 @@
+### Authenticate right user and password
+POST http://127.0.0.1:8081/api/login_user
+content-type: application/x-www-form-urlencoded
+
+username=sonia.silverado
+&password=s
+
+### Authenticate wrong user and password
+POST http://127.0.0.1:8081/api/login_user
+content-type: application/x-www-form-urlencoded
+
+username=sonia.silverado
+&password=wrong
+
+#-----------------------------------
+
+### Retrieve wrong endpoint
+GET http://127.0.0.1:8082/
+
+### Retrieve wrong endpoint
+GET http://127.0.0.1:8082/api/adfasdf
+
+### Retrieve series success
+GET http://127.0.0.1:8082/api/series
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE2NzQ0OTgyMTMsImV4cCI6MTY3NDUxMjYxM30.uxgjsj5ohuGI-l2asiasJS-pwhDmBKaOxd7MnsNYTzQ
+
+### Retrieve serie by uuid success
+GET http://127.0.0.1:8082/api/serie/1703135e-03b3-4a32-b8df-16965d19b862
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE2NzQ0OTgyMTMsImV4cCI6MTY3NDUxMjYxM30.uxgjsj5ohuGI-l2asiasJS-pwhDmBKaOxd7MnsNYTzQ
+
+### Retrieve boxes success
+GET http://127.0.0.1:8082/api/boxes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE2NzQ0OTgyMTMsImV4cCI6MTY3NDUxMjYxM30.uxgjsj5ohuGI-l2asiasJS-pwhDmBKaOxd7MnsNYTzQ
+
+### Retrieve box by uuid success
+GET http://127.0.0.1:8082/api/box/5297d100-cc4a-4893-abd9-b743efab8838
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE2NzQ0OTgyMTMsImV4cCI6MTY3NDUxMjYxM30.uxgjsj5ohuGI-l2asiasJS-pwhDmBKaOxd7MnsNYTzQ
+
+### Retrieve boxes by serie success
+GET http://127.0.0.1:8082/api/serie/1703135e-03b3-4a32-b8df-16965d19b862/boxes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE2NzQ0OTgyMTMsImV4cCI6MTY3NDUxMjYxM30.uxgjsj5ohuGI-l2asiasJS-pwhDmBKaOxd7MnsNYTzQ
+
+### Retrieve figures success
+GET http://127.0.0.1:8082/api/figures
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE2NzQ0OTgyMTMsImV4cCI6MTY3NDUxMjYxM30.uxgjsj5ohuGI-l2asiasJS-pwhDmBKaOxd7MnsNYTzQ
+
+### Retrieve figure by uuid success
+GET http://127.0.0.1:8082/api/figure/104758d6-5cce-4a2e-a66c-c5bf917b0202
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE2NzQ0OTgyMTMsImV4cCI6MTY3NDUxMjYxM30.uxgjsj5ohuGI-l2asiasJS-pwhDmBKaOxd7MnsNYTzQ
+
+### Retrieve figures by box success
+GET http://127.0.0.1:8082/api/box/5297d100-cc4a-4893-abd9-b743efab8838/figures
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE2NzQ0OTgyMTMsImV4cCI6MTY3NDUxMjYxM30.uxgjsj5ohuGI-l2asiasJS-pwhDmBKaOxd7MnsNYTzQ
