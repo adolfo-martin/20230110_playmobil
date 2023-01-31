@@ -73,8 +73,8 @@ export default class TableBoxesComponent extends HTMLElement {
         try {
             const token = window.sessionStorage.getItem('token-playmobil');
 
-            // const serieUuid = this.#extractSerieUuidFromUrl();
-            const serieUuid = this.#serie;
+            const serieUuid = this.#extractSerieUuidFromUrl();
+            // const serieUuid = this.#serie;
 
             const boxes = await this.#service.retrieveBoxesBySerieUuid(token, serieUuid);
 
@@ -88,15 +88,15 @@ export default class TableBoxesComponent extends HTMLElement {
 
                 const nTdDenomination = document.createElement('td');
                 nTr.appendChild(nTdDenomination);
-                nTdDenomination.textContent = box._denomination;
-                nTdDenomination.setAttribute('data-uuid', box._uuid);
+                nTdDenomination.textContent = box.denomination;
+                nTdDenomination.setAttribute('data-uuid', box.uuid);
+                nTdDenomination.addEventListener('click', this.#gotoPageShowFigures.bind(this));
 
                 const nTdPrice = document.createElement('td');
                 nTr.appendChild(nTdPrice);
-                nTdPrice.textContent = box._price;
-                nTdPrice.setAttribute('data-uuid', box._uuid);
-
-                // nTd.addEventListener('click', this.#gotoPageChooseBox.bind(this));
+                nTdPrice.textContent = box.price;
+                nTdPrice.setAttribute('data-uuid', box.uuid);
+                nTdPrice.addEventListener('click', this.#gotoPageShowFigures.bind(this));
             }
 
             this.#dispatchTableFillingCompleted();
@@ -112,9 +112,9 @@ export default class TableBoxesComponent extends HTMLElement {
     }
 
 
-    #gotoPageChooseBox(e) {
+    #gotoPageShowFigures(e) {
         const boxUuid = e.target.dataset.uuid;
-        window.location = `./choose_box.html?box=${boxUuid}`;
+        window.location = `./show_figures.html?box=${boxUuid}`;
     }
 }
 

@@ -10,7 +10,8 @@ export default class PlaymobilServer {
 
         this._app = new express();
         this._app.use(cors());
-
+        this._app.use(express.static(process.cwd() + '/servers/public'))
+    console.log(process.cwd())
         this._setupRoutes();
     }
 
@@ -156,11 +157,13 @@ export default class PlaymobilServer {
             return;
         }
 
+        const { uuid, denomination, serie, description, price } = box;
+
         setTimeout(
             () => {
                 res.status(200).json({
                     ok: true,
-                    box
+                    box: { uuid, denomination, serie, description, price }
                 });
             },
             1000
@@ -188,13 +191,13 @@ export default class PlaymobilServer {
             return;
         }
         
-        const { uuid, denomination, barcode } = figure;
+        const { uuid, denomination, barcode, image } = figure;
 
         setTimeout(
             () => {
                 res.status(200).json({
                     ok: true,
-                    figure: { uuid, denomination, barcode }
+                    figure: { uuid, denomination, barcode, image }
                 });
             },
             1000

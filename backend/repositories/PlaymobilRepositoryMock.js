@@ -486,6 +486,7 @@ export default class PlaymobilRepositoryMock {
                 denomination,
             );
             figure.barcode = barcode;
+            figure.image = 'roman-soldier.jpg';
             return figure;
         }
 

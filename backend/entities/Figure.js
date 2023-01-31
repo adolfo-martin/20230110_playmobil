@@ -2,6 +2,7 @@ export default class Figure {
     #uuid;
     #denomination;
     #barcode;
+    #image;
 
     constructor(uuid, denomination) {
         this.#uuid = uuid;
@@ -22,5 +23,13 @@ export default class Figure {
 
     set barcode(value) {
         this.#barcode = value;
+    }
+
+    get image() {
+        return this.#image;
+    }
+
+    set image(value) {
+        this.#image = value;
     }
 }
