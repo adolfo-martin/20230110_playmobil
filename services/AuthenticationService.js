@@ -1,6 +1,7 @@
 export default class AuthenticationService {
-    async validateUsernameAndPasswordAndGetToken(username, password) {
-        const url = 'http://127.0.0.1:8081/api/login_user';
+
+    async validateUsernameAndPasswordAndRetrieveToken(username, password) {
+        const url = 'http://10.88.74.127:8081/api/login_user';
 
         // Comprueba si el servidor está encendido
         let response;
@@ -10,7 +11,7 @@ export default class AuthenticationService {
                 'content-type': 'application/json',
                 accept: 'application/json'
             };
-            const body = JSON.stringify({ username, password })
+            const body = JSON.stringify({ username, password });
 
             response = await fetch(url, { method, headers, body });
         } catch (error) {
