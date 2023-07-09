@@ -3,9 +3,9 @@ WORKDIR /app
 # COPY package.json .
 # RUN npm install
 COPY ./backend/. .
-EXPOSE 8082
+EXPOSE 80
 CMD ["npm", "run", "start"]
 
-# docker build -t adomargon/server_playmobil:0.16 .
-# docker push adomargon/server_playmobil:0.16
-# docker start adomargon/server_playmobil:0.16
+# docker build -t adomargon/server_playmobil:0.20 .
+# docker push adomargon/server_playmobil:0.20
+# docker start adomargon/server_playmobil:0.20

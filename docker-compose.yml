@@ -11,4 +11,4 @@ services:
     image: adomargon/server_playmobil:0.16
     container_name: playmobil_container
     ports:
-      - "8082:8082"
+      - "8082:80"
