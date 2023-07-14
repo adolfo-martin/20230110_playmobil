@@ -219,14 +219,14 @@ export default class PlaymobilRepositoryMock {
         const figures = [];
         const figuresByBox = [];
 
-        const juliusCaesar = createFigure('956097a5-678f-46f3-95db-789c0a732992', 'Julius Caesar', '512345000107');
-        const romanCenturion = createFigure('5adcafef-2106-476c-9a3a-7628b900d1ad', 'Roman centurion', '133904506408');
-        const romanLegionary = createFigure('7cc8088c-47c8-4d68-a611-b26a4c379f0a', 'Roman legionary', '391345000864');
-        const egyptianPharaon = createFigure('bbcc9ad3-84f3-4f93-8dbc-6ff125122b1f', 'Egyptian pharaon', '749345000358');
-        const egyptianSoldier = createFigure('38f28d4d-5e31-4524-8ea9-3fd13c0bde7d', 'Egyptian soldier', '973345000917');
-        const egyptianHouse = createFigure('0e3607c8-118d-441d-bf8e-0f34829d9e8b', 'Egyptian house', '349730901507');
-        const brownHorse = createFigure('edaf1056-cf87-4085-9cd5-02db3b132da2', 'Brown horse', '705109730349');
-        const blackHorse = createFigure('5e3cdea3-94ac-4a2e-a930-923a2c1d3471', 'Black horse', '109705973430');
+        const juliusCaesar = createFigure('956097a5-678f-46f3-95db-789c0a732992', 'Julius Caesar', '512345000107', 'julius-caesar.jpg');
+        const romanCenturion = createFigure('5adcafef-2106-476c-9a3a-7628b900d1ad', 'Roman centurion', '133904506408', 'roman-centurion.jpg');
+        const romanLegionary = createFigure('7cc8088c-47c8-4d68-a611-b26a4c379f0a', 'Roman legionary', '391345000864', 'roman-soldier.jpg');
+        const egyptianPharaon = createFigure('bbcc9ad3-84f3-4f93-8dbc-6ff125122b1f', 'Egyptian pharaon', '749345000358', 'egyptian-pharaon.jpg');
+        const egyptianSoldier = createFigure('38f28d4d-5e31-4524-8ea9-3fd13c0bde7d', 'Egyptian soldier', '973345000917', 'egyptian-soldier.jpg');
+        const egyptianHouse = createFigure('0e3607c8-118d-441d-bf8e-0f34829d9e8b', 'Egyptian house', '349730901507', 'egyptian-house.jpg');
+        const brownHorse = createFigure('edaf1056-cf87-4085-9cd5-02db3b132da2', 'Brown horse', '705109730349', 'brown-horse.jpg');
+        const blackHorse = createFigure('5e3cdea3-94ac-4a2e-a930-923a2c1d3471', 'Black horse', '109705973430', 'black-horse.jpg');
 
         figures.push(juliusCaesar, romanCenturion, romanLegionary, egyptianPharaon, egyptianSoldier, egyptianHouse);
         figuresByBox.push({
@@ -242,10 +242,10 @@ export default class PlaymobilRepositoryMock {
             ]
         });
 
-        const egyptianPeasant = createFigure('ec6bf079-6bdc-4e5d-95ac-584d66edb0b9', 'Egyptian peasant', '035874934500');
-        const egyptianMummy = createFigure('61357165-e2f7-44f9-ac79-721768ba3272', 'Egyptian mummy', '917973345000');
-        const egyptianThief = createFigure('afacdb06-0698-4463-83f7-2bee79197e10', 'Egyptian thief', '500917973340');
-        const egyptianPyramid = createFigure('2dd11b40-7232-4dd8-bcde-ab9abf44d811', 'Egyptian Pyramid', '500917973340');
+        const egyptianPeasant = createFigure('ec6bf079-6bdc-4e5d-95ac-584d66edb0b9', 'Egyptian peasant', '035874934500', 'egyptian-peasant.jpg');
+        const egyptianMummy = createFigure('61357165-e2f7-44f9-ac79-721768ba3272', 'Egyptian mummy', '917973345000', 'mummy.jpg');
+        const egyptianThief = createFigure('afacdb06-0698-4463-83f7-2bee79197e10', 'Egyptian thief', '500917973340', 'egyptian-thief.jpg');
+        const egyptianPyramid = createFigure('2dd11b40-7232-4dd8-bcde-ab9abf44d811', 'Egyptian Pyramid', '500917973340', 'pyramid.jpg');
 
         figures.push(egyptianPeasant, egyptianMummy, egyptianThief, egyptianPyramid);
         figuresByBox.push({
@@ -261,19 +261,19 @@ export default class PlaymobilRepositoryMock {
             ]
         });
 
-        const godZeus = createFigure('79394c2c-1090-44ca-960f-3e2140a184a7', 'God Zeus', '304574900358');
-        const goddessAphrodite = createFigure('8804cde4-a869-4c5d-abc3-4f7fb18f696f', 'Goddess Aphrodite', '090097334517');
-        const goddessAthena = createFigure('c47b7286-c294-4963-8817-e8f4abcaaa7a', 'Goddess Athena', '449303587500');
-        const heavenlyPalace = createFigure('a9afb6a8-ed37-402b-95fc-34c66616cea5', 'Heavenly palace', '649435500803');
+        const godZeus = createFigure('79394c2c-1090-44ca-960f-3e2140a184a7', 'God Zeus', '304574900358', 'zeus.jpg');
+        const goddessAphrodite = createFigure('8804cde4-a869-4c5d-abc3-4f7fb18f696f', 'Goddess Aphrodite', '090097334517', 'aphrodite.jpg');
+        const goddessAthena = createFigure('c47b7286-c294-4963-8817-e8f4abcaaa7a', 'Goddess Athena', '449303587500', 'athena.jpg');
+        const olympusPalace = createFigure('a9afb6a8-ed37-402b-95fc-34c66616cea5', 'Heavenly palace', '649435500803', 'palace-olympus.jpg');
 
-        figures.push(godZeus, goddessAphrodite, goddessAthena, heavenlyPalace);
+        figures.push(godZeus, goddessAphrodite, goddessAthena, olympusPalace);
         figuresByBox.push({
             boxDenomination: 'Gods of Greece',
             figures: [
                 { figure: godZeus, quantity: 1 },
                 { figure: goddessAphrodite, quantity: 1 },
                 { figure: goddessAthena, quantity: 1 },
-                { figure: heavenlyPalace, quantity: 1 },
+                { figure: olympusPalace, quantity: 1 },
             ]
         });
 
@@ -480,13 +480,13 @@ export default class PlaymobilRepositoryMock {
         return [figures, figuresByBox];
 
 
-        function createFigure(uuid, denomination, barcode) {
+        function createFigure(uuid, denomination, barcode, image = 'roman-soldier.jpg') {
             const figure = new Figure(
                 uuid, 
                 denomination,
             );
             figure.barcode = barcode;
-            figure.image = 'roman-soldier.jpg';
+            figure.image = image;
             return figure;
         }
 
