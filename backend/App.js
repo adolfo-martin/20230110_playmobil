@@ -6,7 +6,7 @@ class App {
     run() {
         const playmobilRepository = new PlaymobilRepositoryMock();
         const playmobilServer = new PlaymobilServer(
-            process.env.PORT || 80, 
+            process.env.PORT || 3000, 
             playmobilRepository
         );
 

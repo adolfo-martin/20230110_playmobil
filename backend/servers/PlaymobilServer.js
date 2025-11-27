@@ -78,8 +78,8 @@ export default class PlaymobilServer {
             () => {
                 res.status(200).json({
                     ok: true,
-                    boxes: boxes.map(({ uuid, denomination, serie, description, price }) => 
-                        ({ uuid, denomination, serie, description, price })
+                    boxes: boxes.map(({ uuid, denomination, serie, description, price, image }) => 
+                        ({ uuid, denomination, serie, description, price, image })
                     )
                 });
             },
@@ -157,13 +157,13 @@ export default class PlaymobilServer {
             return;
         }
 
-        const { uuid, denomination, serie, description, price } = box;
+        const { uuid, denomination, serie, description, price, image } = box;
 
         setTimeout(
             () => {
                 res.status(200).json({
                     ok: true,
-                    box: { uuid, denomination, serie, description, price }
+                    box: { uuid, denomination, serie, description, price, image }
                 });
             },
             1000

@@ -78,7 +78,8 @@ export default class PlaymobilRepositoryMock {
             'Julius Caesar on Egipt', 
             'This box represents when Julius Caesar visit Egipt and meet the Pharaon.',
             39.90,
-            '2969cb0a-e117-4b00-97fc-1887cbd046c0'
+            '2969cb0a-e117-4b00-97fc-1887cbd046c0',
+            'cesar-visits-egypt.jpg'
         ));
 
         boxes.push(createBox(
@@ -86,7 +87,8 @@ export default class PlaymobilRepositoryMock {
             'Great Pyramid of Egipt',
             'This box represents the pyramid where the Pharaon rest after his death.',
             75.80,
-            '2969cb0a-e117-4b00-97fc-1887cbd046c0'
+            '2969cb0a-e117-4b00-97fc-1887cbd046c0',
+            'pyramid.jpg'
         ));
 
         boxes.push(createBox(
@@ -94,7 +96,8 @@ export default class PlaymobilRepositoryMock {
             'Gods of Greece',
             'This box represents the most important gods of the ancient Greece, like Zeus or Poseidon.',
             35.50,
-            '2969cb0a-e117-4b00-97fc-1887cbd046c0'
+            '2969cb0a-e117-4b00-97fc-1887cbd046c0',
+            'palace-olympus.jpg'
         ));
 
         boxes.push(createBox(
@@ -102,7 +105,8 @@ export default class PlaymobilRepositoryMock {
             'Roman legion',
             'This box represents a legion of Roman soldiers with a centurion.',
             35.50,
-            '2969cb0a-e117-4b00-97fc-1887cbd046c0'
+            '2969cb0a-e117-4b00-97fc-1887cbd046c0',
+            'roman-legion.jpg'
         ));
 
         boxes.push(createBox(
@@ -110,7 +114,8 @@ export default class PlaymobilRepositoryMock {
             'Brave knight faces a dragon',
             'This box represents a knight who is fighting against a dragon which attacked some peasants.',
             38.75,
-            '7bc17d34-6858-4b51-9ccd-7e280ec3b5be'
+            '7bc17d34-6858-4b51-9ccd-7e280ec3b5be',
+            'knights-dragons.jpg'
         ));
 
         boxes.push(createBox(
@@ -118,7 +123,8 @@ export default class PlaymobilRepositoryMock {
             'Castle of the King',
             'This box represents the castle of the King who is celebrating a party with princesses and knights.',
             82.50,
-            '7bc17d34-6858-4b51-9ccd-7e280ec3b5be'
+            '7bc17d34-6858-4b51-9ccd-7e280ec3b5be',
+            'castle-king.jpg'
         ));
 
         boxes.push(createBox(
@@ -126,7 +132,8 @@ export default class PlaymobilRepositoryMock {
             'The Black Knight',
             'This box represents warfare between the wicked Black Knight and the King\'s knights.',
             53.90,
-            '7bc17d34-6858-4b51-9ccd-7e280ec3b5be'
+            '7bc17d34-6858-4b51-9ccd-7e280ec3b5be',
+            'castle-black-knight.jpg'
         ));
 
         boxes.push(createBox(
@@ -134,7 +141,8 @@ export default class PlaymobilRepositoryMock {
             'The ranch with cattle',
             'This box represents a ranch with a house, several cowboys, cows and other animals.',
             86.90,
-            '43270ebc-59af-419a-adaa-4f588ec87263'
+            '43270ebc-59af-419a-adaa-4f588ec87263',
+            'ranch-cattle.webp'
         ));
 
         boxes.push(createBox(
@@ -150,7 +158,8 @@ export default class PlaymobilRepositoryMock {
             'Indian village',
             'This box represents an indian village with some indians who are trading with merchants.',
             68.75,
-            '43270ebc-59af-419a-adaa-4f588ec87263'
+            '43270ebc-59af-419a-adaa-4f588ec87263',
+            'indian-village.jpg'
         ));
 
         boxes.push(createBox(
@@ -158,7 +167,8 @@ export default class PlaymobilRepositoryMock {
             'Primary school',
             'This box represents a classroom with a teacher and several pupils making exercises.',
             71.90,
-            '1703135e-03b3-4a32-b8df-16965d19b862'
+            '1703135e-03b3-4a32-b8df-16965d19b862',
+            'primary-school.jpg'
         ));
 
         boxes.push(createBox(
@@ -166,7 +176,8 @@ export default class PlaymobilRepositoryMock {
             'Software developers',
             'This box represents a group of developers on their desktop programming in JavaScript language.',
             95.75,
-            '1703135e-03b3-4a32-b8df-16965d19b862'
+            '1703135e-03b3-4a32-b8df-16965d19b862',
+            'software-developers.webp'
         ));
 
         boxes.push(createBox(
@@ -182,7 +193,8 @@ export default class PlaymobilRepositoryMock {
             'Truck and driver',
             'This box represents a driver with his truck and some commodities which need to be transported.',
             44.50,
-            '1703135e-03b3-4a32-b8df-16965d19b862'
+            '1703135e-03b3-4a32-b8df-16965d19b862',
+            'truck-driver.jpg'
         ));
 
         boxes.push(createBox(
@@ -195,7 +207,7 @@ export default class PlaymobilRepositoryMock {
 
         return boxes;
 
-        function createBox(uuid, denomination, description, price, serieUuid) {
+        function createBox(uuid, denomination, description, price, serieUuid, image = 'image-not-available.jpg') {
             const box = new Box(
                 uuid, 
                 denomination,
@@ -204,6 +216,7 @@ export default class PlaymobilRepositoryMock {
             );
             box.description = description;
             box.price = price;
+            box.image = image;
             return box;
         }
 
@@ -480,7 +493,7 @@ export default class PlaymobilRepositoryMock {
         return [figures, figuresByBox];
 
 
-        function createFigure(uuid, denomination, barcode, image = 'roman-soldier.jpg') {
+        function createFigure(uuid, denomination, barcode, image = 'image-not-available.jpg') {
             const figure = new Figure(
                 uuid, 
                 denomination,

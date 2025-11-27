@@ -3,6 +3,7 @@ export default class Box {
         this._uuid = uuid;
         this._denomination = denomination;
         this._serie = serie;
+        this._image = 'image-not-available.jpg';
     }
 
     get uuid() {
@@ -31,5 +32,13 @@ export default class Box {
 
     set price(value) {
         this._price = value;
+    }
+
+    get image() {
+        return this._image;
+    }
+
+    set image(value) {
+        this._image = value;
     }
 }
