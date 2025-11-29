@@ -1,0 +1,41 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+
+    --orange-100: #FFEACC;
+    --orange-200: #F9D3AB;
+    --orange-300: #F2BC8B;
+    --orange-400: #ECA56A;
+    --orange-500: #E58E4A;
+    --orange-600: #D67B32;
+    --orange-700: #C06721;
+    --orange-800: #A05216;
+    --orange-900: #4B1A08;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+app-root {
+    width: 1280px;
+    min-height: inherit;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.page-title {
+    background-color: var(--orange-200);
+    color: var(--orange-900);
+    margin: 0.5em 0;
+    padding: 0.5em 0 0.25em 0;
+    text-align: center;
+    text-transform: uppercase;
+}

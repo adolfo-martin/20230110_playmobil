@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Playmobil</title>
 
     <style>
         :root {
@@ -28,20 +28,18 @@
 
     <script src="../components/LoginFormComponent.js" type="module" defer></script>
     <script type="module">
-        document.addEventListener('DOMContentLoaded', e => {
-            const nForm = document.querySelector('#tFrmLogin');
+        const nForm = document.querySelector('#tFrmLogin');
 
-            nForm.addEventListener('successfullogin', e => {
-                const token = e.detail.token;
-                const username = e.detail.username;
-                window.sessionStorage.setItem('token-playmobil', token);
-                window.location = './choose_serie.html'
-            });
+        nForm.addEventListener('successfullogin', e => {
+            const token = e.detail.token;
+            const username = e.detail.username;
+            window.sessionStorage.setItem('token-playmobil', token);
+            window.location = './choose_serie.html'
+        });
 
-            nForm.addEventListener('wronglogin', e => {
-                const message = e.detail.message;
-                alert(`El usuario no se ha identificado correctamente: ${message}`);
-            });
+        nForm.addEventListener('wronglogin', e => {
+            const message = e.detail.message;
+            alert(`El usuario no se ha identificado correctamente: ${message}`);
         });
     </script>
 </head>

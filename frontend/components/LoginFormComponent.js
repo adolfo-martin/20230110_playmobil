@@ -1,4 +1,4 @@
-import AuthenticationService from '../services/AuthenticationService.js';
+import AuthenticationService from '/services/AuthenticationService.js';
 
 export default class LoginFormComponent extends HTMLElement {
     #template = `
@@ -6,7 +6,23 @@ export default class LoginFormComponent extends HTMLElement {
             :host {
                 display: inline-grid;
                 grid-template-columns: auto auto;
-                gap: 0.5rem;
+                gap: 1em 0.5em;
+                border: none;
+                border-radius: 1em;
+                padding: 1em;
+            }
+
+            * {
+                user-select: none;
+            }
+
+            header {
+                background-color: var(--orange-900);
+                color: white;
+                font-size: 2em;
+                text-align: center;
+                text-transform: uppercase;
+                padding: 0.5em 1em;
             }
 
             header,
@@ -16,11 +32,19 @@ export default class LoginFormComponent extends HTMLElement {
 
             label {
                 text-align: right;
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+
+            input {
+                font-size: 1.5em;
+                margin-right: 1em;
             }
 
             button {
                 width: fit-content;
-                margin: auto;
+                font-size: 1.5em;
+                margin: 0.5em auto 1em auto;
             }
         </style>
 
@@ -32,7 +56,7 @@ export default class LoginFormComponent extends HTMLElement {
         <label>Contraseña: </label>
         <input type="password" class="password">
 
-        <button>Validar</button>
+        <button type="button">Validar</button>
     `;
 
     #shadowRoot;
