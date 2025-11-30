@@ -1,7 +1,6 @@
 import Serie from '../entities/Serie.js';
 import Box from '../entities/Box.js';
 import Figure from '../entities/Figure.js';
-import crypto from 'crypto';
 
 export default class PlaymobilRepositoryMock {
 
@@ -61,12 +60,54 @@ export default class PlaymobilRepositoryMock {
 
 
     static #setupSeries() {
-        return [
+        const series = [
             new Serie('2969cb0a-e117-4b00-97fc-1887cbd046c0', 'Ancient Ages'),
             new Serie('7bc17d34-6858-4b51-9ccd-7e280ec3b5be', 'Knights and Princess'),
             new Serie('43270ebc-59af-419a-adaa-4f588ec87263', 'Western'),
             new Serie('1703135e-03b3-4a32-b8df-16965d19b862', 'Modern jobs'),
-        ]
+        ];
+
+        series[0].description = `
+            La línea "History" de Playmobil convierte el aprendizaje de la historia en una experiencia tangible y divertida, ofreciendo sets detallados que fomentan el juego de roles y la comprensión de diferentes culturas y eventos históricos.
+            Playmobil ha explorado ampliamente los tiempos antiguos a través de su línea de productos "History", que ha permitido a niños y coleccionistas recrear y aprender sobre civilizaciones milenarias como la Antigua Roma, Egipto y Grecia.
+            Antiguo Egipto: Una de las temáticas más populares. Los sets incluyen elementos icónicos como la gran pirámide, esfinges con pasadizos secretos, y figuras de faraones, soldados con camellos, y cleopatras.
+            Imperio Romano: Esta línea presenta guerreros romanos, carros (cuadrigas), y fortificaciones, permitiendo recrear la vida en las legiones y batallas de la antigüedad.
+            Antigua Grecia y Mitología: Playmobil ha producido una colección dedicada a los dioses y héroes griegos, incluyendo figuras de Zeus, Hera, Poseidón, Aquiles y Ulises, con accesorios y escenarios relacionados con la mitología.
+            Vikingos: Aunque ligeramente posteriores a la antigüedad clásica, los sets de vikingos también forman parte de esta exploración histórica, incluyendo barcos y poblados detallados.
+        `; 
+        series[0].image = 'cesar-visits-egypt.jpg';
+
+        series[1].description = `
+            Línea Playmobil Knights y Princesas
+            Las líneas de productos de Playmobil dedicadas a caballeros y princesas transportan a los niños a la época medieval y a mundos de cuento de hadas, ofreciendo sets detallados que fomentan la imaginación y el juego de roles.
+            La línea de caballeros de Playmobil es una de las temáticas originales y más perdurables, que ha evolucionado a lo largo de los años.
+            Temática: Se centra en la vida medieval, batallas, defensa de castillos y torneos, con diferentes facciones como los "Falcon Knights" (Caballeros del Halcón) y los "Lion Knights" (Caballeros del León).
+            Sets icónicos: Incluyen grandes castillos con puentes levadizos funcionales, mazmorras y cañones que disparan, así como una amplia gama de armaduras, armas, caballos y figuras de soldados.
+            Sets actuales: La línea más reciente se llama Playmobil Novelmore, que introduce un universo de fantasía con magia, héroes y villanos, como el Príncipe Arwynn, y armas ingeniosas, ofreciendo una narrativa más elaborada y moderna a la temática medieval.
+        `; 
+        series[1].image = 'castle-king.jpg';
+
+        series[2].description = `
+            Línea Playmobil Western
+            La línea de productos Playmobil Western (Oeste) es una de las temáticas más emblemáticas y nostálgicas de la marca, presente desde sus inicios y que captura el espíritu aventurero del Salvaje Oeste americano. 
+            Historia y Evolución
+            La temática Western ha sido fundamental en la historia de Playmobil y ha experimentado varias encarnaciones a lo largo de las décadas. 
+            Lanzamiento inicial (década de 1970): La línea del Salvaje Oeste se lanzó poco después del debut de Playmobil en 1974. De hecho, una de las tres figuras originales de 1974 fue un nativo americano.
+            Años 80 y 90: Durante estas décadas, la línea se expandió significativamente con sets detallados, incluyendo el icónico Fort Randall (1980) y más tarde el Fort Glory (1994), diligencias, bancos, salones y estaciones de tren. Los sets de soldados de la Unión (nordistas) y confederados (sudistas), así como los campamentos indios, eran muy populares entre los aficionados.
+            Resurgimientos: Tras un período de ausencia de nuevos sets importantes, la línea Western resurgió en 2012 con nuevos diseños, como el Fort Brave, y continúa lanzando sets ocasionales para mantener vivo el interés de los coleccionistas y nuevos públicos. 
+        `; 
+        series[2].image = 'ranch-cattle.webp';
+
+        series[3].description = `
+            Línea Playmobil Tiempos Modernos
+            Esta línea se centra en la vida urbana y familiar, abarcando actividades cotidianas y servicios comunitarios.
+            Temática: Recrea el día a día en una ciudad moderna, incluyendo hogares, tiendas, parques y servicios de salud.
+            Sets Icónicos: La Casa Moderna (Modern House) es uno de los sets más destacados, un edificio modular y detallado que se puede amueblar con diferentes habitaciones (cocina, baño, salón, etc.). Otros sets populares incluyen hospitales, centros comerciales, escuelas, piscinas y parques infantiles.
+            Enfoque: Fomenta el juego de roles relacionado con la vida familiar, las compras, la socialización y el cuidado de la salud. 
+        `; 
+        series[3].image = 'software-developers.webp';
+
+        return series;
     }
 
     
@@ -79,7 +120,7 @@ export default class PlaymobilRepositoryMock {
             'This box represents when Julius Caesar visit Egipt and meet the Pharaon.',
             39.90,
             '2969cb0a-e117-4b00-97fc-1887cbd046c0',
-            'cesar-visits-egypt.jpg'
+            'cesar-visits-egypt.jpg',
         ));
 
         boxes.push(createBox(

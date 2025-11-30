@@ -5,7 +5,7 @@ import FooterAppComponent from "/components/FooterAppComponent.js";
 export default class AppRootComponent extends HTMLElement {
     #template = `
         <style>
-            :host {                
+            :host {
                 display: grid;
                 grid-template-areas:
                     "header"
@@ -14,7 +14,7 @@ export default class AppRootComponent extends HTMLElement {
                     "footer"
                 ;
                 grid-template-columns: 1fr;
-                grid-template-rows: auto auto 1fr auto;
+                grid-template-rows: auto auto minmax(auto, 1fr) auto;
             }
 
             header {
@@ -27,6 +27,7 @@ export default class AppRootComponent extends HTMLElement {
 
             main {
                 grid-area: main;
+                width: 100%;
             }
 
             footer-app {

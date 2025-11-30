@@ -1,44 +1,51 @@
 export default class Box {
+    #uuid;
+    #denomination;
+    #serie;
+    #image;
+    #description;
+    #price;
+
     constructor(uuid, denomination, serie) {
-        this._uuid = uuid;
-        this._denomination = denomination;
-        this._serie = serie;
-        this._image = 'image-not-available.jpg';
+        this.#uuid = uuid;
+        this.#denomination = denomination;
+        this.#serie = serie;
+        this.#image = 'image-not-available.jpg';
     }
 
     get uuid() {
-        return this._uuid;
+        return this.#uuid;
     }
 
     get denomination() {
-        return this._denomination;
+        return this.#denomination;
     }
 
     get serie() {
-        return this._serie;
+        return this.#serie;
     }
 
     get description() {
-        return this._description;
+        return this.#description;
     }
 
     set description(value) {
-        this._description = value;
+        this.#description = value;
     }
 
     get price() {
-        return this._price;
+        return this.#price;
     }
 
     set price(value) {
-        this._price = value;
+        this.#price = value;
     }
 
     get image() {
-        return this._image;
+        return this.#image;
     }
 
     set image(value) {
-        this._image = value;
+        this.#image = value;
     }
 }

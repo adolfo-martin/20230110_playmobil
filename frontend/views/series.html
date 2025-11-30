@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/views/style.css">
+    <style>
+        div {
+            height: 100%;
+            width: 100%;
+            background-color: chartreuse;
+            display: grid;
+            place-content: center;
+        }
+    </style>
+
+    <script type="module" src="/components/AppRootComponent.js"></script>
+    <script src="/components/TableSeriesComponent.js" type="module" defer></script>
+</head>
+<body>
+    <app-root>
+        <h1 class="page-title">Series de Playmobil</h1>
+        <div>
+            <table-series></table-series>    
+        </div>
+    </app-root>
+</body>
+</html>

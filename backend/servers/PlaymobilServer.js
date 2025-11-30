@@ -129,7 +129,12 @@ export default class PlaymobilServer {
             () => {
                 res.status(200).json({
                     ok: true,
-                    serie
+                    serie: { 
+                        uuid: serie.uuid, 
+                        denomination: serie.denomination,
+                        description: serie.description, 
+                        image: serie.image, 
+                    },
                 });
             },
             1000

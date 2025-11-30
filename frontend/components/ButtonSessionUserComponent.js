@@ -3,7 +3,7 @@ import LoginFormComponent from '/components/LoginFormComponent.js';
 
 export default class ButtonSessionUserComponent extends HTMLElement {
     #template = `
-        <style>            
+        <style>        
             button {
                 border: none;
                 outline: none;
@@ -23,6 +23,7 @@ export default class ButtonSessionUserComponent extends HTMLElement {
                 width: auto;
                 height: auto;
                 border-radius: 1em;
+                font-size: 2em;
             }
 
             dialog {
@@ -61,10 +62,12 @@ export default class ButtonSessionUserComponent extends HTMLElement {
             this.#shadowRoot.querySelector('#tButLogin').textContent = `${firstname} ${lastname}`;
             this.#shadowRoot.querySelector('#tButLogin').classList.toggle('show-image');
             // window.location = './choose_serie.html'
+            this.#shadowRoot.querySelector('#tDlgLogin').close();
         });
 
         nForm.addEventListener('wronglogin', e => {
             const message = e.detail.message;
+            this.#shadowRoot.querySelector('#tDlgLogin').close();
             alert(`El usuario no se ha identificado correctamente: ${message}`);
         });
     }
